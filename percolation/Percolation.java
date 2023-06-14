@@ -7,7 +7,15 @@
 public class Percolation {
     public Percolation(int n) {
         // Create 2D array.
-        int[][] gird = new int[n][n];
+        int[][] mySystem = new int[n][n];
+
+        // Block all the sites internally
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                mySystem[i][j] = i + j;
+            }
+        }
+
     }
 
     public void open(int row, int col) {
@@ -35,6 +43,6 @@ public class Percolation {
     }
 
     public static void main(String[] args) {
-        // TODO TEST Client
+        Percolation mySys = new Percolation(3);
     }
 }
