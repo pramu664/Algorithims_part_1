@@ -87,9 +87,14 @@
     "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Playground">
     <configuration name="Percolation" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Percolation" />
+      <module name="Algorithms, Part I" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Playground" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Playground" />
       <module name="Algorithms, Part I" />
       <method v="2" />
     </configuration>
@@ -133,16 +138,5 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
     </layout>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Percolation.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
