@@ -4,40 +4,49 @@
  *  Last modified:     1/1/2019
  **************************************************************************** */
 
-import edu.princeton.cs.algs4.Vector;
+import edu.princeton.cs.algs4.StdRandom;
 
 public class Percolation {
+    private int[][] precolationSystem;
+
     public Percolation(int n) {
-        // Create 2D array.
-        int[][] mySystem = new int[n][n];
+
+        precolationSystem = new int[n + 1][n + 1];
 
         // Block all the sites internally
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                mySystem[i][j] = 0;
+        for (int i = 0; i < n + 1; i++) {
+            for (int j = 0; j < n + 1; j++) {
+                precolationSystem[i][j] = 0;
             }
         }
 
     }
 
-    public void open(int row, int col) {
-        // TODO
-        // Unifomaly pick random cell between zero and size of 2D array.
-        int counter = 1;
-        Vector cell;
-        for (int i = 0; i < row; i++) {
-            for (int j = 0; j < col; j++) {
-                // ??
-                counter++;
+    public static int getRandomIndex(int size) {
+        int index = 0;
+        for (int i = 0; i < size; i++) {
+            if (StdRandom.bernoulli(1.0 / (i + 1))) {
+                index = i;
             }
         }
+        return index;
+    }
 
-        // Index into the 2D array and set 1 as that variable value.
+    public void open(int row, int col) {
+
+        //  pick random site and open it
+        precolationSystem[row][col] = 1;
+
     }
 
     public boolean isOpen(int row, int col) {
         // TODO
-        return false;
+        if (precolationSystem[row][col] == 1) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
     public boolean isFull(int row, int col) {
@@ -56,6 +65,10 @@ public class Percolation {
     }
 
     public static void main(String[] args) {
-        Percolation mySys = new Percolation(3);
+        Percolation mySys = new Percolation(1);
+
+        mySys.open(1, 1);
+
+
     }
 }
