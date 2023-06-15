@@ -87,7 +87,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.UF">
+  <component name="RunManager" selected="Application.QuickUnion">
     <configuration name="Percolation" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Percolation" />
       <module name="Algorithms, Part I" />
@@ -104,6 +104,11 @@
       <module name="Algorithms, Part I" />
       <method v="2" />
     </configuration>
+    <configuration name="QuickUnion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="QuickUnion" />
+      <module name="Algorithms, Part I" />
+      <method v="2" />
+    </configuration>
     <configuration name="UF" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="UF" />
       <module name="Algorithms, Part I" />
@@ -114,8 +119,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.UF" />
+        <item itemvalue="Application.QuickUnion" />
         <item itemvalue="Application.PercolationVisualizer" />
+        <item itemvalue="Application.UF" />
       </list>
     </recent_temporary>
   </component>
@@ -168,6 +174,16 @@
           <url>file://$PROJECT_DIR$/UF.java</url>
           <line>50</line>
           <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Percolation.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/QuickUnion.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
