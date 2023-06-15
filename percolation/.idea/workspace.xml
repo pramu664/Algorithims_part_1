@@ -166,8 +166,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/UF.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="29" />
+          <line>50</line>
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
