@@ -19,7 +19,7 @@ public class UF {
         }
     }
 
-    public boolean isConnected(int p, int q) {
+    public boolean connected(int p, int q) {
         if (id[p] == id[q]) {
             return true;
         }
@@ -43,7 +43,7 @@ public class UF {
 
     public static void main(String[] args) {
         // Test client
-       
+
         UF uf = new UF(10);
         uf.union(3, 4);
         uf.union(1, 2);
@@ -52,9 +52,9 @@ public class UF {
         uf.union(7, 8);
 
         boolean result;
-        result = uf.isConnected(3, 4);
+        result = uf.connected(3, 4);
         // -> true
-        result = uf.isConnected(6, 7);
+        result = uf.connected(6, 7);
         // -> false
     }
 }
