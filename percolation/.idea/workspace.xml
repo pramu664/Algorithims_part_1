@@ -87,7 +87,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Percolation">
+  <component name="RunManager" selected="Application.SocialConnectivity">
     <configuration name="InteractivePercolationVisualizer" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="InteractivePercolationVisualizer" />
       <module name="Algorithms, Part I" />
@@ -121,8 +121,8 @@
       <module name="Algorithms, Part I" />
       <method v="2" />
     </configuration>
-    <configuration name="UF" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="UF" />
+    <configuration name="SocialConnectivity" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SocialConnectivity" />
       <module name="Algorithms, Part I" />
       <method v="2" />
     </configuration>
@@ -141,11 +141,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SocialConnectivity" />
         <item itemvalue="Application.PercolationVisualizer" />
         <item itemvalue="Application.WeightedQuickUnion" />
         <item itemvalue="Application.QuickUnion" />
         <item itemvalue="Application.UnionFind" />
-        <item itemvalue="Application.UF" />
       </list>
     </recent_temporary>
   </component>

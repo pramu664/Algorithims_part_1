@@ -13,7 +13,6 @@ public class SocialConnectivity {
         for (int i = 0; i < earliestTimes.length; i++) {
             earliestTimes[i] = -1;
         }
-
     }
 
     public void connect(int p, int q, int timestamp) {
@@ -21,7 +20,7 @@ public class SocialConnectivity {
         int rq = uf.find(q);
 
         if (rp != rq) {
-            uf.union(rp, rq);
+            uf.union(p, q);
 
             int root = uf.find(p);
             if (earliestTimes[root] == -1 || timestamp < earliestTimes[root]) {
@@ -32,6 +31,22 @@ public class SocialConnectivity {
         connections[p] = new Connection(p, q, timestamp);
 
     }
+
+    public int earliestTimeAllMembersAreConnected() {
+        int earliestTime = Integer.MAX_VALUE;
+        for (int time : earliestTimes) {
+            if (time != -1 && time < earliestTime) {
+                earliestTime = time;
+            }
+        }
+        return earliestTime;
+    }
+
+
+    public static void main(String[] args) {
+   
+    }
+
 }
 
 class Connection {
