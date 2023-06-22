@@ -1,30 +1,47 @@
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
 public class SocialConnectivity {
-    int[][] social;
-    WeightedQuickUnionUF uf;
-    int connection_count;
+
+    private WeightedQuickUnionUF uf;
+    private Connection[] connections;
+    private int[] earliestTimes;
 
     public SocialConnectivity(int n) {
         uf = new WeightedQuickUnionUF(n);
-        social = new int[n][n];
-    }
-
-    public boolean allConnected(int p, int q) {
-        return connection_count - 1 == social.length;
-    }
-
-
-    public int EarliestTimeAllConnect() {
-        // TODO- ? How to get p, q and timestamp as inputs probably using for loop over social array
-        while (!allConnected(p, q)) {
-            uf.union(p, q);
-            connection_count += 1;
+        connections = new Connection[n];
+        earliestTimes = new int[n];
+        for (int i = 0; i < earliestTimes.length; i++) {
+            earliestTimes[i] = -1;
         }
-        return timestamp;
+
     }
 
-    public static void main(String[] args) {
+    public void connect(int p, int q, int timestamp) {
+        int rp = uf.find(p);
+        int rq = uf.find(q);
 
+        if (rp != rq) {
+            uf.union(rp, rq);
+
+            int root = uf.find(p);
+            if (earliestTimes[root] == -1 || timestamp < earliestTimes[root]) {
+                earliestTimes[root] = timestamp;
+            }
+        }
+
+        connections[p] = new Connection(p, q, timestamp);
+
+    }
+}
+
+class Connection {
+    private int p;
+    private int q;
+    private int timestamp;
+
+    public Connection(int p, int q, int timestamp) {
+        this.p = p;
+        this.q = q;
+        this.timestamp = timestamp;
     }
 }
