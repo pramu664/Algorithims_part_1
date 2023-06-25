@@ -87,7 +87,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.SocialConnectivity">
+  <component name="RunManager" selected="Application.Stack">
     <configuration name="InteractivePercolationVisualizer" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="InteractivePercolationVisualizer" />
       <module name="Algorithms, Part I" />
@@ -123,6 +123,11 @@
     </configuration>
     <configuration name="SocialConnectivity" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="SocialConnectivity" />
+      <module name="Algorithms, Part I" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Stack" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Stack" />
       <module name="Algorithms, Part I" />
       <method v="2" />
     </configuration>
