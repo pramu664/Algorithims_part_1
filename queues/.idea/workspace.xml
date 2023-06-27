@@ -19,6 +19,11 @@
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
     <option name="SCHEME" value="Project" />
   </component>
   <component name="FindBugs-IDEA-Workspace">
@@ -70,6 +75,35 @@
     <option name="showModules" value="false" />
     <option name="sortByType" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/user/Documents/GitHub/Algorithims_part_1/queues"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.Permutation">
+    <configuration name="MyStack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MyStack" />
+      <module name="Algorithms, Part I" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Permutation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Permutation" />
+      <module name="Algorithms, Part I" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Permutation" />
+        <item itemvalue="Application.MyStack" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -106,5 +140,21 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
     </layout>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/MyStack.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="MyStack" memberName="head" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
