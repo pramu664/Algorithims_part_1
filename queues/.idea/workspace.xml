@@ -82,9 +82,16 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Documents/GitHub/Algorithims_part_1/queues&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.MyList">
+  <component name="RunManager" selected="Application.MyQueue">
     <configuration name="MyList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MyList" />
+      <module name="Algorithms, Part I" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyQueue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MyQueue" />
       <module name="Algorithms, Part I" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -106,6 +113,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MyQueue" />
         <item itemvalue="Application.MyList" />
         <item itemvalue="Application.MyStack" />
         <item itemvalue="Application.Permutation" />
