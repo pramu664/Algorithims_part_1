@@ -2,6 +2,7 @@ import java.util.NoSuchElementException;
 
 public class Deque {
     private Node head;
+    private Node tail;
 
     private class Node {
         String item;
@@ -26,7 +27,7 @@ public class Deque {
 
     // Add item to the top
     public void addFirst(String item) {
-        if (item == null) throw new IllegalArgumentException("Empty value!");
+        if (item == null) throw new IllegalArgumentException("Invalid item!");
         Node newNode = new Node(item);
         if (head == null) {
             head = newNode;
@@ -35,6 +36,21 @@ public class Deque {
             newNode.next = head;
             head = newNode;
         }
+    }
+
+    // Add item to the last
+    public void addLast(String item) {
+        if (item == null) throw new IllegalArgumentException("Invalid item!");
+        Node newNode = new Node(item);
+
+        if (head == null) {
+            head = newNode;
+            tail = head;
+            return;
+        }
+
+        tail.next = newNode;
+        tail = tail.next;
     }
 
     // Remove item from the top
@@ -51,7 +67,6 @@ public class Deque {
 
     public static void main(String[] args) {
         // Test client
-        Deque myList = new Deque();
-        myList.removeFirst();
+     
     }
 }
