@@ -175,7 +175,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Deque.java</url>
-          <line>100</line>
+          <line>131</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>

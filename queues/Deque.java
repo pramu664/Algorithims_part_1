@@ -1,15 +1,18 @@
+import edu.princeton.cs.algs4.StdOut;
+
+import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class Deque {
-    private Node head;
-    private Node tail;
+public class Deque<T> implements Iterable<T> {
+    private Node<T> head;
+    private Node<T> tail;
     private int size;
 
-    private class Node {
-        String item;
-        Node next;
+    private class Node<T> {
+        T item;
+        Node<T> next;
 
-        public Node(String item) {
+        public Node(T item) {
             this.item = item;
             this.next = null;
         }
@@ -29,9 +32,9 @@ public class Deque {
     }
 
     // Add item to the top
-    public void addFirst(String item) {
+    public void addFirst(T item) {
         if (item == null) throw new IllegalArgumentException("Invalid item!");
-        Node newNode = new Node(item);
+        Node<T> newNode = new Node<T>(item);
         if (head == null) {
             head = newNode;
             tail = head;
@@ -44,9 +47,9 @@ public class Deque {
     }
 
     // Add item to the last
-    public void addLast(String item) {
+    public void addLast(T item) {
         if (item == null) throw new IllegalArgumentException("Invalid item!");
-        Node newNode = new Node(item);
+        Node<T> newNode = new Node<T>(item);
 
         if (head == null) {
             head = newNode;
@@ -61,9 +64,9 @@ public class Deque {
     }
 
     // Remove item from the top
-    public String removeFirst() {
+    public T removeFirst() {
         if (head != null) {
-            String item = head.item;
+            T item = head.item;
             head = head.next;
             size--;
             return item;
@@ -74,16 +77,16 @@ public class Deque {
     }
 
     // Remove item from the last
-    public String removeLast() {
+    public T removeLast() {
         if (size == 0) {
             throw new NoSuchElementException("Empty deque!");
         }
         else {
-            Node temp = head;
+            Node<T> temp = head;
             for (int i = 0; i < this.getSize() - 2; i++) {
                 temp = temp.next;
             }
-            String item = tail.item;
+            T item = tail.item;
             tail = temp;
             temp.next = null;
             size--;
@@ -96,13 +99,44 @@ public class Deque {
         return size;
     }
 
+    // Iterator
+    public Iterator<T> iterator() {
+        return new DequeIterator();
+    }
+
+    private class DequeIterator implements Iterator<T> {
+        private Node<T> current = head;
+
+        public boolean hasNext() {
+            return current != null;
+        }
+
+        public T next() {
+            if (hasNext()) {
+                T item = current.item;
+                current = current.next;
+                return item;
+            }
+            else {
+                throw new NoSuchElementException("Empty!");
+            }
+        }
+
+        public void remove() {
+            throw new UnsupportedOperationException("Not implemented!");
+        }
+    }
+
     public static void main(String[] args) {
         // Test client
-        Deque myList = new Deque();
+        Deque<String> myList = new Deque<String>();
         myList.addFirst("Harry");
         myList.addFirst("Hermione");
         myList.addFirst("Ron");
         // head -> Ron -> Hermione -> Harry <- Tail
-        myList.removeLast();
+
+        for (String name : myList) {
+            StdOut.println(name);
+        }
     }
 }
