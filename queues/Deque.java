@@ -131,12 +131,21 @@ public class Deque<T> implements Iterable<T> {
         // Test client
         Deque<String> myList = new Deque<String>();
         myList.addFirst("Harry");
-        myList.addFirst("Hermione");
+        myList.addLast("Hermione");
         myList.addFirst("Ron");
-        // head -> Ron -> Hermione -> Harry <- Tail
+        myList.addLast("Draco");
+        myList.addFirst("Luna");
+        myList.removeLast();
+        myList.removeFirst();
+        myList.getSize();
+        // Ron, Harry, Hermione
 
         for (String name : myList) {
             StdOut.println(name);
         }
+
+        myList.iterator().hasNext();
+        myList.iterator().next();
+        myList.iterator().remove();
     }
 }
