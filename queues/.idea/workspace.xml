@@ -82,7 +82,7 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Documents/GitHub/Algorithims_part_1/queues&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Deque">
+  <component name="RunManager" selected="Application.StackArray">
     <configuration name="Deque" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Deque" />
       <module name="Algorithms, Part I" />
@@ -111,8 +111,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Permutation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Permutation" />
+    <configuration name="StackArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="StackArray" />
       <module name="Algorithms, Part I" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -120,11 +120,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StackArray" />
         <item itemvalue="Application.Deque" />
         <item itemvalue="Application.MyQueue" />
         <item itemvalue="Application.MyList" />
         <item itemvalue="Application.MyStack" />
-        <item itemvalue="Application.Permutation" />
       </list>
     </recent_temporary>
   </component>
@@ -172,6 +172,11 @@
           <url>file://$PROJECT_DIR$/MyList.java</url>
           <line>58</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/StackArray.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
