@@ -114,6 +114,7 @@
     <configuration name="StackArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="StackArray" />
       <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="Harry Hermione Draco - Ron" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -172,11 +173,6 @@
           <url>file://$PROJECT_DIR$/MyList.java</url>
           <line>58</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/StackArray.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

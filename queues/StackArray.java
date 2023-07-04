@@ -1,19 +1,23 @@
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
+
+import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class StackArray {
-    String[] s;
+public class StackArray<T> implements Iterable<T> {
+    T[] s;
     int N;
     int size;
 
     public StackArray() {
-        s = new String[1];
+        s = (T[]) new Object[1]; // TODO
         N = -1;
         size = 0;
     }
 
-    public void push(String item) {
+    public void push(T item) {
         if (s[s.length - 1] != null) {
-            String[] newS = new String[s.length * 2];
+            T[] newS = (T[]) new Object[s.length * 2];
             for (int i = 0; i < s.length; i++) {
                 newS[i] = s[i];
             }
@@ -27,9 +31,9 @@ public class StackArray {
         }
     }
 
-    public String pop() {
+    public T pop() {
         if (N > 0 && N == s.length / 4) {
-            String[] copy = new String[s.length / 2];
+            T[] copy = (T[]) new Object[s.length / 2];
             for (int i = 0; i < copy.length; i++) {
                 copy[i] = s[i];
             }
@@ -40,7 +44,7 @@ public class StackArray {
             throw new NoSuchElementException("Empty!");
         }
         else {
-            String item = s[N];
+            T item = s[N];
             s[N] = null;
             N = N - 1;
             size = size - 1;
@@ -56,23 +60,47 @@ public class StackArray {
         return size;
     }
 
+
+    // Iterator
+    public Iterator<T> iterator() {
+        return new StackIterator();
+    }
+
+    private class StackIterator implements Iterator<T> {
+        public int temp = 0;
+
+        public boolean hasNext() {
+            return temp != N + 1;
+        }
+
+        public T next() {
+            if (hasNext()) {
+                T item = s[temp];
+                temp = temp + 1;
+                return item;
+            }
+            else {
+                throw new NoSuchElementException("No value to read!");
+            }
+        }
+    }
+
     public static void main(String[] args) {
         // Test client
-        StackArray gryffindor = new StackArray();
-        boolean result0 = gryffindor.isEmpty();
-        gryffindor.push("Harry");
-        gryffindor.push("Hermione");
-        gryffindor.push("Ron");
-        gryffindor.push("fred");
-        gryffindor.push("George");
-        boolean result1 = gryffindor.isEmpty();
-        int size = gryffindor.getLength();
+        StackArray<String> gryffindor = new StackArray<String>();
+        while (!StdIn.isEmpty()) {
+            String name = StdIn.readString();
+            if (name.equals("-")) {
+                StdOut.print(gryffindor.pop() + " ");
+            }
+            else {
+                gryffindor.push(name);
+            }
+        }
 
-        gryffindor.pop();
-        gryffindor.pop();
-        gryffindor.pop();
-        gryffindor.pop();
-        gryffindor.pop();
-        gryffindor.pop();
+        for (String name : gryffindor) {
+            StdOut.println(name);
+        }
+
     }
 }
